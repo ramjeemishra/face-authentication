@@ -1,4 +1,4 @@
-# face-authentication
+# A simple facial recognition system using Python and OpenCV.
 
 1)  install all dependencies.
 2)  run sample.py  
