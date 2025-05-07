@@ -1,3 +1,4 @@
+# this file not related with project.     "only to check if camera is working or not"
 import cv2
 
 cap = cv2.VideoCapture()
