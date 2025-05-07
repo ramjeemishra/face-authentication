@@ -1,13 +1,12 @@
 import cv2
 import numpy as np
-from PIL import Image #pillow package
+from PIL import Image 
 import os
 
 path = 'auth\\samples' # Path for samples already taken
 
 recognizer = cv2.face.LBPHFaceRecognizer_create() # Local Binary Patterns Histograms
 detector = cv2.CascadeClassifier("auth\\haarcascade_frontalface_default.xml")
-#Haar Cascade classifier is an effective object detection approach
 
 
 def Images_And_Labels(path): # function to fetch the images and labels
@@ -16,10 +15,10 @@ def Images_And_Labels(path): # function to fetch the images and labels
     faceSamples=[]
     ids = []
 
-    for imagePath in imagePaths: # to iterate particular image path
+    for imagePath in imagePaths: 
 
-        gray_img = Image.open(imagePath).convert('L') # convert it to grayscale
-        img_arr = np.array(gray_img,'uint8') #creating an array
+        gray_img = Image.open(imagePath).convert('L')
+        img_arr = np.array(gray_img,'uint8') 
 
         id = int(os.path.split(imagePath)[-1].split(".")[1])
         faces = detector.detectMultiScale(img_arr)
