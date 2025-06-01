@@ -9,7 +9,7 @@ recognizer = cv2.face.LBPHFaceRecognizer_create() # Local Binary Patterns Histog
 detector = cv2.CascadeClassifier("auth\\haarcascade_frontalface_default.xml")
 
 
-def Images_And_Labels(path): # function to fetch the images and labels
+def Images_And_Labels(path): # function to fetch the images/labels
 
     imagePaths = [os.path.join(path,f) for f in os.listdir(path)]     
     faceSamples=[]
